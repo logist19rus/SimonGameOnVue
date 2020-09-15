@@ -1,39 +1,63 @@
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .game{
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
     margin-right: 20px;
+    background: #fafafa;
+    border-radius: 50%;
 }
 .game_button{
-    width: 49%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
     opacity: 0.6;
 }
 .game_button:hover{
     cursor: pointer;
-    border: 1px solid black;
 }
 .blue{
     background: blue;
     border-radius: 100% 0 0 0;
 }
+.blue:hover{
+    transform: translateX(-2px) translateY(-2px);
+}
 .red{
     background: red;
     border-radius: 0 100% 0 0;
+}
+.red:hover{
+    transform: translateX(2px) translateY(-2px);
 }
 .yellow{
     background: yellow;
     border-radius: 0 0 0 100%;
 }
+.yellow:hover{
+    transform: translateX(-2px) translateY(2px);
+}
 .green{
     background: green;
     border-radius: 0 0 100% 0;
 }
+.green:hover{
+    transform: translateX(2px) translateY(2px);
+}
 .opac{
     opacity: 1 !important;
+}
+.controller{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 200px;
+}
+.controller>div{
+    margin-top: 10px;
 }

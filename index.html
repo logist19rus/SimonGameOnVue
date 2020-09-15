@@ -17,11 +17,8 @@
         </div>
         <div class="controller">
             <input type="button" value="Start" @click="start_game()">
-            <div class="score_txt" v-if="score">
-                Уровень: {{ score }}
-            </div>
-            <div class="score_txt" v-if="lose">
-                Вы ошблись. Начните, пожалуйста, сначала
+            <div class="">
+                Сложность:
             </div>
             <div class="diff">
                 <input type="radio" name="compl" value="0" v-model="complexity">
@@ -34,6 +31,12 @@
             <div class="diff">
                 <input type="radio" name="compl" value="2" v-model="complexity">
                 Hard
+            </div>
+            <div class="score_txt" v-if="score">
+                Уровень: {{ score }}
+            </div>
+            <div class="score_txt" v-if="lose">
+                Вы ошиблись. Начните, пожалуйста, сначала
             </div>
         </div>
     </div>
