@@ -62,7 +62,7 @@
     margin-top: 10px;
 }
 
-@media (max-width:350px){
+@media (max-width:500px){
     .container{
         flex-direction: column;
     }
@@ -74,5 +74,11 @@
     .game_button{
         width: 110px;
         height: 110px;
+    }
+    .score_txt{
+        text-align: center;
+        background: #afffaf;
+        padding: 3px;
+        border-radius: 7px;
     }
 }
