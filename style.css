@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+}
+.game_button{
+    width: 49%;
+    height: 50%;
+    opacity: 0.6;
+}
+.game_button:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+.blue{
+    background: blue;
+    border-radius: 100% 0 0 0;
+}
+.red{
+    background: red;
+    border-radius: 0 100% 0 0;
+}
+.yellow{
+    background: yellow;
+    border-radius: 0 0 0 100%;
+}
+.green{
+    background: green;
+    border-radius: 0 0 100% 0;
+}
+.opac{
+    opacity: 1 !important;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Simon</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="game">
+            <div class="game_button blue" v-bind:class="{opac:opacityBlue}" @click="btnclick(0)"></div>
+            <div class="game_button red" v-bind:class="{opac:opacityRed}" @click="btnclick(1)"></div>
+            <div class="game_button yellow" v-bind:class="{opac:opacityYellow}" @click="btnclick(2)"></div>
+            <div class="game_button green" v-bind:class="{opac:opacityGreen}" @click="btnclick(3)"></div>
+        </div>
+        <div class="controller">
+            <input type="button" value="Start" @click="start_game()">
+            <div class="score_txt" v-if="score">
+                Уровень: {{ score }}
+            </div>
+            <div class="score_txt" v-if="lose">
+                Вы ошблись. Начните, пожалуйста, сначала
+            </div>
+            <div class="diff">
+                <input type="radio" name="compl" value="0" v-model="complexity">
+                Easy
+            </div>
+            <div class="diff">
+                <input type="radio" name="compl" value="1" v-model="complexity">
+                Medium
+            </div>
+            <div class="diff">
+                <input type="radio" name="compl" value="2" v-model="complexity">
+                Hard
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
